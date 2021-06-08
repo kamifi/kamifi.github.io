@@ -472,6 +472,8 @@
   .mobile_link {
     display: block;
     margin-top: 0.3rem;
+    z-index: 10000;
+    position: relative;
   }
   .mobile_link .mobile_btn {
     margin-bottom: 0.4rem;

@@ -363,13 +363,15 @@
           return e('div', { staticClass: 'dina_top_container lay_g_mw' }, [
             e('div', { staticClass: 'lay_g_w top_container' }, [
               e('div', { staticClass: 'gear_view view_1' }, [
-                e('img', { attrs: { src: i('8cc8') } }),
+                e('canvas', {
+                  attrs: {
+                    src: i('8cc8'),
+                    id: 'canv',
+                  },
+                }),
                 e('div', { staticClass: 'gear_view view_2' }, [
-                  e('img', { attrs: { src: i('4648') } }),
                   e('div', { staticClass: 'gear_view view_3' }, [
-                    e('img', { attrs: { src: i('ae90') } }),
                     e('div', { staticClass: 'gear_view view_4' }, [
-                      e('img', { attrs: { src: i('86cb') } }),
                       e('div', { staticClass: 'gear_inner' }, [
                         e('img', { attrs: { src: i('7298') } }),
                       ]),
