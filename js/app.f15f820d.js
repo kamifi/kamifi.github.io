@@ -261,7 +261,7 @@
               {
                 staticClass: 'belgafont buy_btn g_btn_hover',
                 attrs: {
-                  href: 'https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xbAbc56b365511177832e2dd579be8d34a8d2157f',
+                  href: 'https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x2892AB6f1F4fBE3BB4F5304fe44A93792786F183',
                 },
               },
               [t._v(' Buy ')]
@@ -387,7 +387,7 @@
                 e('div', { staticClass: 'arrow' }, [
                   e('a', {
                     attrs: {
-                      href: 'https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xbAbc56b365511177832e2dd579be8d34a8d2157f',
+                      href: 'https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x2892AB6f1F4fBE3BB4F5304fe44A93792786F183',
                     },
                   }),
                 ]),
@@ -396,7 +396,7 @@
                 e('div', { staticClass: 'arrow' }, [
                   e('a', {
                     attrs: {
-                      href: 'https://dex.guru/token/0xbAbc56b365511177832e2dd579be8d34a8d2157f-bsc',
+                      href: 'https://dex.guru/token/0x2892AB6f1F4fBE3BB4F5304fe44A93792786F183-bsc',
                     },
                   }),
                 ]),
@@ -411,7 +411,7 @@
                     'a',
                     {
                       attrs: {
-                        href: 'https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xbAbc56b365511177832e2dd579be8d34a8d2157f',
+                        href: 'https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x2892AB6f1F4fBE3BB4F5304fe44A93792786F183',
                       },
                     },
                     [t._v('BUY NOW')]
@@ -422,7 +422,7 @@
                     'a',
                     {
                       attrs: {
-                        href: 'https://dex.guru/token/0xbAbc56b365511177832e2dd579be8d34a8d2157f-bsc',
+                        href: 'https://dex.guru/token/0x2892AB6f1F4fBE3BB4F5304fe44A93792786F183-bsc',
                       },
                     },
                     [t._v('VIEW chart')]
@@ -510,7 +510,7 @@
               {
                 staticClass: 'g_btn_hover',
                 attrs: {
-                  href: 'https://bscscan.com/token/0x55d398326f99059ff775485246999027b3197955?a=0x13Cf8d78dFf4175aCc4546155De774226527f997',
+                  href: 'https://bscscan.com/token/0x55d398326f99059ff775485246999027b3197955?a=0x38A4Ee0f0EABb8b110edCad1D3e57A655E786970',
                 },
               },
               [t._v('BALANCE')]
@@ -552,7 +552,7 @@
           fetchData: function () {
             var t = this;
             fetch(
-              'https://api.bscscan.com/api?module=proxy&action=eth_call&to=0x13Cf8d78dFf4175aCc4546155De774226527f997&data=0xe84d2696&tag=latest&apikey=SCFZ9MRBYDKJHFPK1Z5WDXDGPQ9A8Y7FH1'
+              'https://api.bscscan.com/api?module=proxy&action=eth_call&to=0x38A4Ee0f0EABb8b110edCad1D3e57A655E786970&data=0xe84d2696&tag=latest&apikey=SCFZ9MRBYDKJHFPK1Z5WDXDGPQ9A8Y7FH1'
             )
               .then(function (t) {
                 return t.json();
@@ -562,7 +562,7 @@
                 var i = new W.a(a.result, 16).toNumber();
                 if (!isNaN(i)) {
                   var e = (Date.now() / 1e3) << 0,
-                    s = i + 14400 - e;
+                    s = i + 60*60 - e; // FOMO时间
                   t.cdnum = s;
                 }
               });
@@ -570,7 +570,7 @@
           fetchBalance: function () {
             var t = this;
             fetch(
-              'https://api.bscscan.com/api?module=account&action=tokenbalance&contractaddress=0x55d398326f99059ff775485246999027b3197955&address=0x13Cf8d78dFf4175aCc4546155De774226527f997&tag=latest&apikey=SCFZ9MRBYDKJHFPK1Z5WDXDGPQ9A8Y7FH1'
+              'https://api.bscscan.com/api?module=account&action=tokenbalance&contractaddress=0x55d398326f99059ff775485246999027b3197955&address=0x38A4Ee0f0EABb8b110edCad1D3e57A655E786970&tag=latest&apikey=SCFZ9MRBYDKJHFPK1Z5WDXDGPQ9A8Y7FH1'
             )
               .then(function (t) {
                 return t.json();
@@ -683,7 +683,7 @@
           fetchPersent: function () {
             var t = this;
             fetch(
-              'https://api.bscscan.com/api?module=account&action=tokenbalance&contractaddress=0xbAbc56b365511177832e2dd579be8d34a8d2157f&address=0x0000000000000000000000000000000000000001&tag=latest&apikey=SCFZ9MRBYDKJHFPK1Z5WDXDGPQ9A8Y7FH1'
+              'https://api.bscscan.com/api?module=account&action=tokenbalance&contractaddress=0x2892AB6f1F4fBE3BB4F5304fe44A93792786F183&address=0x0000000000000000000000000000000000000001&tag=latest&apikey=SCFZ9MRBYDKJHFPK1Z5WDXDGPQ9A8Y7FH1'
             )
               .then(function (t) {
                 return t.json();
